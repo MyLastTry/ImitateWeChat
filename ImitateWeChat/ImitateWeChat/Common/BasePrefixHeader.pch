@@ -1,0 +1,18 @@
+//
+//  BasePrefixHeader.pch
+//  ImitateWeChat
+//
+//  Created by Xltt on 2022/10/12.
+//
+
+#ifndef BasePrefixHeader_pch
+#define BasePrefixHeader_pch
+
+#pragma mark --------------------------- import ---------------------------
+
+#pragma mark --------------------------- color ---------------------------
+#define UIColorFromRGB(rgbValue)  [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0f green:((float)((rgbValue & 0xFF00) >> 8))/255.0f blue:((float)(rgbValue & 0xFF))/255.0f alpha:1.0f]
+#define VTC(r,g,b) WJColor(r,g,b,1.0f)
+#define NavBlue UIColorFromRGB(0x7086FE)
+
+#endif /* BasePrefixHeader_pch */
