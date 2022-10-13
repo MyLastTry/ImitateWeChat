@@ -16,7 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[PushCtrManager shared] addCtr:self];
-    self.view.backgroundColor = UIColor.whiteColor;
+    self.view.backgroundColor = NavGray;
 }
 
 - (void)viewDidDisappear:(BOOL)animated {

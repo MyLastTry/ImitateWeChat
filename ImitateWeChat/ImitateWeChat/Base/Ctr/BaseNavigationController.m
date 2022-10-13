@@ -21,9 +21,9 @@
 - (void)initNavBar {
     UINavigationBarAppearance *navBarAppearance = [[UINavigationBarAppearance alloc]init];
     [navBarAppearance configureWithOpaqueBackground];
-    navBarAppearance.backgroundColor = NavBlue;
+    navBarAppearance.backgroundColor = NavGray;
     [navBarAppearance setTitleTextAttributes:
-     @{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[UIFont systemFontOfSize:17.0f]}];
+     @{NSForegroundColorAttributeName:[UIColor blackColor],NSFontAttributeName:[UIFont systemFontOfSize:17.0f]}];
     UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[BaseNavigationController class]]];
     navBar.standardAppearance = navBarAppearance;
     navBar.scrollEdgeAppearance = navBarAppearance;

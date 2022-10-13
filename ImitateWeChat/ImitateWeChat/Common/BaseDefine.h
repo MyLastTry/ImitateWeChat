@@ -8,5 +8,6 @@
 #ifndef BaseDefine_h
 #define BaseDefine_h
 
-
+/**弱指针*/
+#define WeakSelf(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 #endif /* BaseDefine_h */

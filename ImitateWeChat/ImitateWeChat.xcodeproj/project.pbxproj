@@ -25,6 +25,13 @@
 		B39A76BA28F6BDF2002C7C71 /* ProfileController.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A76B928F6BDF2002C7C71 /* ProfileController.m */; };
 		B39A76C728F6C384002C7C71 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B39A76C928F6C384002C7C71 /* Localizable.strings */; };
 		B39A76D028F6C448002C7C71 /* PushCtrManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A76CF28F6C448002C7C71 /* PushCtrManager.m */; };
+		B39A76DA28F7A525002C7C71 /* UIView+LayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A76D928F7A525002C7C71 /* UIView+LayoutConstraint.m */; };
+		B39A76DD28F7AD96002C7C71 /* make.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A76DC28F7AD96002C7C71 /* make.m */; };
+		B39A76DF28F7AF63002C7C71 /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A76DE28F7AF63002C7C71 /* ProfileHeaderCell.swift */; };
+		B39A76E128F7AF7D002C7C71 /* ProfieNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A76E028F7AF7D002C7C71 /* ProfieNormalCell.swift */; };
+		B39A76E328F7CBF8002C7C71 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A76E228F7CBF8002C7C71 /* Extension.swift */; };
+		B39A76EA28F7E225002C7C71 /* ProfileData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39A76E928F7E225002C7C71 /* ProfileData.plist */; };
+		B39A76F528F7EF6F002C7C71 /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A76F428F7EF6F002C7C71 /* InformationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +93,15 @@
 		B39A76CB28F6C38B002C7C71 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		B39A76CE28F6C448002C7C71 /* PushCtrManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PushCtrManager.h; sourceTree = "<group>"; };
 		B39A76CF28F6C448002C7C71 /* PushCtrManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PushCtrManager.m; sourceTree = "<group>"; };
+		B39A76D828F7A525002C7C71 /* UIView+LayoutConstraint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutConstraint.h"; sourceTree = "<group>"; };
+		B39A76D928F7A525002C7C71 /* UIView+LayoutConstraint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutConstraint.m"; sourceTree = "<group>"; };
+		B39A76DB28F7AD96002C7C71 /* make.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = make.h; sourceTree = "<group>"; };
+		B39A76DC28F7AD96002C7C71 /* make.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = make.m; sourceTree = "<group>"; };
+		B39A76DE28F7AF63002C7C71 /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		B39A76E028F7AF7D002C7C71 /* ProfieNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfieNormalCell.swift; sourceTree = "<group>"; };
+		B39A76E228F7CBF8002C7C71 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		B39A76E928F7E225002C7C71 /* ProfileData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProfileData.plist; sourceTree = "<group>"; };
+		B39A76F428F7EF6F002C7C71 /* InformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +152,8 @@
 		B39A766428F6B929002C7C71 /* ImitateWeChat */ = {
 			isa = PBXGroup;
 			children = (
+				B39A76E428F7DDA4002C7C71 /* Categories */,
+				B39A76D728F7A4E4002C7C71 /* Tools */,
 				B39A76BB28F6C14A002C7C71 /* Common */,
 				B39A76A528F6BC1F002C7C71 /* Classes */,
 				B39A769A28F6B95D002C7C71 /* Application */,
@@ -225,7 +243,10 @@
 		B39A76A928F6BC64002C7C71 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				B39A76EB28F7E3D2002C7C71 /* Model */,
+				B39A76E828F7E1FC002C7C71 /* Data */,
 				B39A76B728F6BDD7002C7C71 /* Controller */,
+				B39A76D128F797F3002C7C71 /* View */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -260,6 +281,7 @@
 		B39A76B728F6BDD7002C7C71 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B39A76F328F7EEEF002C7C71 /* Information */,
 				B39A76B828F6BDF2002C7C71 /* ProfileController.h */,
 				B39A76B928F6BDF2002C7C71 /* ProfileController.m */,
 			);
@@ -272,6 +294,7 @@
 				B39A76BC28F6C17A002C7C71 /* BasePrefixHeader.pch */,
 				B39A76BD28F6C1C7002C7C71 /* BaseDefine.h */,
 				B39A76BE28F6C1F7002C7C71 /* ImitateWeChat-Bridging-Header.h */,
+				B39A76E228F7CBF8002C7C71 /* Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -296,6 +319,56 @@
 				B39A76CF28F6C448002C7C71 /* PushCtrManager.m */,
 			);
 			path = Mgr;
+			sourceTree = "<group>";
+		};
+		B39A76D128F797F3002C7C71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B39A76DE28F7AF63002C7C71 /* ProfileHeaderCell.swift */,
+				B39A76E028F7AF7D002C7C71 /* ProfieNormalCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B39A76D728F7A4E4002C7C71 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B39A76E428F7DDA4002C7C71 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				B39A76D828F7A525002C7C71 /* UIView+LayoutConstraint.h */,
+				B39A76D928F7A525002C7C71 /* UIView+LayoutConstraint.m */,
+				B39A76DB28F7AD96002C7C71 /* make.h */,
+				B39A76DC28F7AD96002C7C71 /* make.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		B39A76E828F7E1FC002C7C71 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B39A76E928F7E225002C7C71 /* ProfileData.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B39A76EB28F7E3D2002C7C71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B39A76F328F7EEEF002C7C71 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				B39A76F428F7EF6F002C7C71 /* InformationController.swift */,
+			);
+			path = Information;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -407,6 +480,7 @@
 				B39A767528F6B92D002C7C71 /* LaunchScreen.storyboard in Resources */,
 				B39A76C728F6C384002C7C71 /* Localizable.strings in Resources */,
 				B39A767228F6B92D002C7C71 /* Assets.xcassets in Resources */,
+				B39A76EA28F7E225002C7C71 /* ProfileData.plist in Resources */,
 				B39A767028F6B929002C7C71 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,9 +506,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B39A76DD28F7AD96002C7C71 /* make.m in Sources */,
 				B39A769E28F6BACE002C7C71 /* BaseTabBarController.m in Sources */,
+				B39A76E128F7AF7D002C7C71 /* ProfieNormalCell.swift in Sources */,
+				B39A76DF28F7AF63002C7C71 /* ProfileHeaderCell.swift in Sources */,
+				B39A76DA28F7A525002C7C71 /* UIView+LayoutConstraint.m in Sources */,
 				B39A76BA28F6BDF2002C7C71 /* ProfileController.m in Sources */,
 				B39A76A428F6BBF3002C7C71 /* BaseViewController.m in Sources */,
+				B39A76E328F7CBF8002C7C71 /* Extension.swift in Sources */,
+				B39A76F528F7EF6F002C7C71 /* InformationController.swift in Sources */,
 				B39A76A128F6BAFA002C7C71 /* BaseNavigationController.m in Sources */,
 				B39A766728F6B929002C7C71 /* AppDelegate.m in Sources */,
 				B39A76AD28F6BD34002C7C71 /* WeChatController.m in Sources */,
@@ -690,6 +770,7 @@
 		B39A769528F6B92D002C7C71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -708,6 +789,7 @@
 		B39A769628F6B92D002C7C71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -726,6 +808,7 @@
 		B39A769828F6B92D002C7C71 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FAA262ZN79;
@@ -742,6 +825,7 @@
 		B39A769928F6B92D002C7C71 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FAA262ZN79;

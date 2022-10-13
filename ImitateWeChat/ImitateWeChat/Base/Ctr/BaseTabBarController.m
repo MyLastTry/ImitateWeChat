@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self addChildViewControllers];
-    [self.tabBar setBackgroundColor:UIColorFromRGB(0xF6F6F7)];
+    [self.tabBar setBackgroundColor:TabGray];
 }
 
 /// 添加子控制器
@@ -48,6 +48,7 @@
     BaseNavigationController *profileNavVc = [[BaseNavigationController alloc] initWithRootViewController:profileVc];
     profileNavVc.tabBarItem.image = [UIImage imageNamed:@"massage"];
     profileNavVc.tabBarItem.selectedImage = [UIImage imageNamed:@"massage_selected"];
+    [profileNavVc.navigationBar setHidden:YES];
     
     
     self.viewControllers = @[weChatNavVc,contactNavVc,findNavVc,profileNavVc];
