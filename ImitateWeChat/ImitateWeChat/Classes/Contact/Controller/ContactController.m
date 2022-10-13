@@ -7,8 +7,16 @@
 
 #import "ContactController.h"
 
-@interface ContactController ()
+static NSString *FindNormalCellId = @"FindNormalCellId";
 
+@interface ContactController () <UITableViewDelegate, UITableViewDataSource>
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) UISearchBar *searchBar;
+
+/** 字母*/
+@property (strong, nonatomic) NSMutableArray *A_ZArray;
+/** 字母A_Z 之后*/
+@property (strong, nonatomic) NSMutableArray *sub_A_ZArray;
 @end
 
 @implementation ContactController
@@ -17,5 +25,72 @@
     [super viewDidLoad];
 }
 
+- (void)initUI {
+    _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,
+                                                              NaviHeight + StatusH,
+                                                              ScreenWidth,
+                                                              ScreenHeight - TabbarHeight - NaviHeight - StatusH)
+                                             style:UITableViewStylePlain];
+    [_tableView registerClass:FindNormalCell.class forCellReuseIdentifier:FindNormalCellId];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    if (@available(iOS 11.0, *)){
+        _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        _tableView.estimatedRowHeight = 0;
+        _tableView.estimatedSectionHeaderHeight = 0;
+        _tableView.estimatedSectionFooterHeight = 0;
+    }
+    _tableView.backgroundColor = NavGray;
+    [self.view addSubview:_tableView];
+}
+
+#pragma mark --------------------UITableViewDataSource--------------------
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    FindNormalCell *cell = (FindNormalCell *)[tableView dequeueReusableCellWithIdentifier:FindNormalCellId];
+    [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 2;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 7;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return 0;
+    }
+    return 5;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 54;
+}
+
+- (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"];
+}
+
+-(NSMutableArray *)A_ZArray{
+    if (_A_ZArray == nil) {
+        _A_ZArray = [NSMutableArray arrayWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#", nil];
+    }
+    return _A_ZArray;
+}
+
+-(NSMutableArray *)sub_A_ZArray{
+    if (_sub_A_ZArray == nil) {
+        _sub_A_ZArray = [NSMutableArray array];
+    }
+    return _sub_A_ZArray;
+}
 
 @end

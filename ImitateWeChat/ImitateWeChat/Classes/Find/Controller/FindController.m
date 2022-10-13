@@ -20,7 +20,11 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
 }
 
 - (void)initUI {
-    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, NaviHeight + StatusH, ScreenWidth, ScreenHeight - TabbarHeight) style:UITableViewStylePlain];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,
+                                                              NaviHeight + StatusH,
+                                                              ScreenWidth,
+                                                              ScreenHeight - TabbarHeight - NaviHeight - StatusH)
+                                             style:UITableViewStylePlain];
     [_tableView registerClass:FindNormalCell.class forCellReuseIdentifier:FindNormalCellId];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -30,7 +34,7 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
         _tableView.estimatedSectionHeaderHeight = 0;
         _tableView.estimatedSectionFooterHeight = 0;
     }
-
+    _tableView.backgroundColor = NavGray;
     [self.view addSubview:_tableView];
 }
 
