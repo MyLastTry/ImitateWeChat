@@ -18,7 +18,6 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initUI];
 }
 
 

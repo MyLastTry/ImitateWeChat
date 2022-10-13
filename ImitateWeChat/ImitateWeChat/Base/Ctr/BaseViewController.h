@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseViewController : UIViewController
-
+- (void)initUI;
 @end
 
 NS_ASSUME_NONNULL_END

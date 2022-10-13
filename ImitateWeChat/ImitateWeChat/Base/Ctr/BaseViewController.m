@@ -17,11 +17,16 @@
     [super viewDidLoad];
     [[PushCtrManager shared] addCtr:self];
     self.view.backgroundColor = NavGray;
+    [self initUI];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [[PushCtrManager shared] removeCtr:self];
+}
+
+- (void)initUI {
+    
 }
 
 @end

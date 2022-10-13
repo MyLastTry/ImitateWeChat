@@ -32,6 +32,9 @@
 		B39A76E328F7CBF8002C7C71 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A76E228F7CBF8002C7C71 /* Extension.swift */; };
 		B39A76EA28F7E225002C7C71 /* ProfileData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B39A76E928F7E225002C7C71 /* ProfileData.plist */; };
 		B39A76F528F7EF6F002C7C71 /* InformationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A76F428F7EF6F002C7C71 /* InformationController.swift */; };
+		B39A76F828F809D6002C7C71 /* FindNormalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A76F728F809D6002C7C71 /* FindNormalCell.swift */; };
+		B39A76FA28F80BE8002C7C71 /* CommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A76F928F80BE8002C7C71 /* CommonDefine.swift */; };
+		B39A76FD28F812C4002C7C71 /* UIDevice+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A76FC28F812C4002C7C71 /* UIDevice+Addition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +105,10 @@
 		B39A76E228F7CBF8002C7C71 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		B39A76E928F7E225002C7C71 /* ProfileData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ProfileData.plist; sourceTree = "<group>"; };
 		B39A76F428F7EF6F002C7C71 /* InformationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationController.swift; sourceTree = "<group>"; };
+		B39A76F728F809D6002C7C71 /* FindNormalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindNormalCell.swift; sourceTree = "<group>"; };
+		B39A76F928F80BE8002C7C71 /* CommonDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonDefine.swift; sourceTree = "<group>"; };
+		B39A76FB28F812C4002C7C71 /* UIDevice+Addition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+Addition.h"; sourceTree = "<group>"; };
+		B39A76FC28F812C4002C7C71 /* UIDevice+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Addition.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +242,7 @@
 		B39A76A828F6BC52002C7C71 /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				B39A76F628F809AA002C7C71 /* View */,
 				B39A76B328F6BDB0002C7C71 /* Controller */,
 			);
 			path = Find;
@@ -295,6 +303,7 @@
 				B39A76BD28F6C1C7002C7C71 /* BaseDefine.h */,
 				B39A76BE28F6C1F7002C7C71 /* ImitateWeChat-Bridging-Header.h */,
 				B39A76E228F7CBF8002C7C71 /* Extension.swift */,
+				B39A76F928F80BE8002C7C71 /* CommonDefine.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -344,6 +353,8 @@
 				B39A76D928F7A525002C7C71 /* UIView+LayoutConstraint.m */,
 				B39A76DB28F7AD96002C7C71 /* make.h */,
 				B39A76DC28F7AD96002C7C71 /* make.m */,
+				B39A76FB28F812C4002C7C71 /* UIDevice+Addition.h */,
+				B39A76FC28F812C4002C7C71 /* UIDevice+Addition.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -369,6 +380,14 @@
 				B39A76F428F7EF6F002C7C71 /* InformationController.swift */,
 			);
 			path = Information;
+			sourceTree = "<group>";
+		};
+		B39A76F628F809AA002C7C71 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B39A76F728F809D6002C7C71 /* FindNormalCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +532,7 @@
 				B39A76DA28F7A525002C7C71 /* UIView+LayoutConstraint.m in Sources */,
 				B39A76BA28F6BDF2002C7C71 /* ProfileController.m in Sources */,
 				B39A76A428F6BBF3002C7C71 /* BaseViewController.m in Sources */,
+				B39A76FD28F812C4002C7C71 /* UIDevice+Addition.m in Sources */,
 				B39A76E328F7CBF8002C7C71 /* Extension.swift in Sources */,
 				B39A76F528F7EF6F002C7C71 /* InformationController.swift in Sources */,
 				B39A76A128F6BAFA002C7C71 /* BaseNavigationController.m in Sources */,
@@ -522,7 +542,9 @@
 				B39A76B628F6BDD0002C7C71 /* FindController.m in Sources */,
 				B39A767828F6B92D002C7C71 /* main.m in Sources */,
 				B39A766A28F6B929002C7C71 /* SceneDelegate.m in Sources */,
+				B39A76FA28F80BE8002C7C71 /* CommonDefine.swift in Sources */,
 				B39A76D028F6C448002C7C71 /* PushCtrManager.m in Sources */,
+				B39A76F828F809D6002C7C71 /* FindNormalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
