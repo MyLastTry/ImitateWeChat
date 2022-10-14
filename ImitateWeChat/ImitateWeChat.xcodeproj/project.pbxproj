@@ -39,6 +39,7 @@
 		B39A76FD28F812C4002C7C71 /* UIDevice+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A76FC28F812C4002C7C71 /* UIDevice+Addition.m */; };
 		B39A770128F903C9002C7C71 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A770028F903C9002C7C71 /* ContactModel.swift */; };
 		B39A770528F908D7002C7C71 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A770428F908D7002C7C71 /* BaseTableViewCell.swift */; };
+		B39A770728F93221002C7C71 /* TextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B39A770628F93221002C7C71 /* TextView.xib */; };
 		D97116FF112BE3AC494E0149 /* Pods_ImitateWeChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B01B6AD512E91CC1F4379C /* Pods_ImitateWeChatTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +123,7 @@
 		B39A76FC28F812C4002C7C71 /* UIDevice+Addition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+Addition.m"; sourceTree = "<group>"; };
 		B39A770028F903C9002C7C71 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		B39A770428F908D7002C7C71 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		B39A770628F93221002C7C71 /* TextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextView.xib; sourceTree = "<group>"; };
 		C93E501C75206959850E5DE8 /* Pods_ImitateWeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImitateWeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B01B6AD512E91CC1F4379C /* Pods_ImitateWeChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImitateWeChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2DF22D3AB102FB4B32940A9 /* Pods-ImitateWeChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateWeChatTests.release.xcconfig"; path = "Target Support Files/Pods-ImitateWeChatTests/Pods-ImitateWeChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -448,6 +450,7 @@
 			isa = PBXGroup;
 			children = (
 				B39A770428F908D7002C7C71 /* BaseTableViewCell.swift */,
+				B39A770628F93221002C7C71 /* TextView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39A767528F6B92D002C7C71 /* LaunchScreen.storyboard in Resources */,
+				B39A770728F93221002C7C71 /* TextView.xib in Resources */,
 				B39A76C728F6C384002C7C71 /* Localizable.strings in Resources */,
 				B39A767228F6B92D002C7C71 /* Assets.xcassets in Resources */,
 				B39A76EA28F7E225002C7C71 /* ProfileData.plist in Resources */,

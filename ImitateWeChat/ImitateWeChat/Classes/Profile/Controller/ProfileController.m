@@ -22,8 +22,8 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 
 
 - (void)initUI {
-    
-    _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
+    self.view.backgroundColor = [[UIColor alloc] initWithR:255.0 g:255.0 b:255.0 a:1];
+    _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 57, ScreenWidth, ScreenHeight) style:UITableViewStyleGrouped];
     [_tableView registerClass:ProfileHeaderCell.class forCellReuseIdentifier:ProfileHeaderCellId];
     [_tableView registerClass:ProfieNormalCell.class forCellReuseIdentifier:ProfileNormalCellId];
     _tableView.delegate = self;
@@ -43,12 +43,12 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
     UITableViewCell *cell;
     if (indexPath.section == 0) {
         cell = (ProfileHeaderCell *)[tableView dequeueReusableCellWithIdentifier:ProfileHeaderCellId];
-        cell.backgroundColor = NavGray;
     } else {
         cell = (ProfieNormalCell *)[tableView dequeueReusableCellWithIdentifier:ProfileNormalCellId];
     }
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    cell.backgroundColor = [[UIColor alloc] initWithR:255.0 g:255.0 b:255.0 a:1];
     return  cell;
 }
 
@@ -61,6 +61,12 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 10;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
+    UIView *footView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 10)];
+    footView.backgroundColor = NavGray;
+    return footView;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
