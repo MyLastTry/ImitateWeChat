@@ -7,6 +7,10 @@
 
 import Foundation
 import UIKit
+// MARK: -------------------------------- 全局Import --------------------------------
+@_exported
+import SnapKit
+
 
 let IsiPad: Bool = {
     let deviceType = UIDevice.current.model

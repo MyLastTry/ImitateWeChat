@@ -1,0 +1,22 @@
+PODS:
+  - Mantle (2.2.0):
+    - Mantle/extobjc (= 2.2.0)
+  - Mantle/extobjc (2.2.0)
+  - SnapKit (5.6.0)
+
+DEPENDENCIES:
+  - Mantle
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - Mantle
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Mantle: c5aa8794a29a022dfbbfc9799af95f477a69b62d
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+
+PODFILE CHECKSUM: 0af8275a6d7ac2f1c78d16da8c044d21e956030b
+
+COCOAPODS: 1.11.3
