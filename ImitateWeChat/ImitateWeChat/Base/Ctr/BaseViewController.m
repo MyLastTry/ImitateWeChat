@@ -17,6 +17,7 @@
     [super viewDidLoad];
     [[PushCtrManager shared] addCtr:self];
     self.view.backgroundColor = NavGray;
+    [self initData];
     [self initUI];
 }
 
@@ -26,6 +27,10 @@
 }
 
 - (void)initUI {
+    
+}
+
+- (void)initData {
     
 }
 

@@ -25,13 +25,22 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
     [super viewDidLoad];
 }
 
+- (void)initData {
+    
+}
+
 - (void)initUI {
-    _searchBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
+    self.searchBar.frame = CGRectMake(0, 0, ScreenWidth, 60);
+    UIView *backView = [[UIView alloc]initWithFrame:CGRectMake(0, NaviHeight, ScreenWidth, 60)];
+    [backView setBackgroundColor:NavGray];
+    [backView addSubview:self.searchBar];
+    _searchBar.translucent = YES;
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0,
-                                                              NaviHeight + StatusH,
+                                                              NaviHeight,
                                                               ScreenWidth,
                                                               ScreenHeight - TabbarHeight - NaviHeight - StatusH)
-                                             style:UITableViewStylePlain];
+                                             style:UITableViewStyleGrouped];
+    _tableView.tableHeaderView = backView;
     [_tableView registerClass:FindNormalCell.class forCellReuseIdentifier:FindNormalCellId];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -53,6 +62,9 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 5;
+    }
     return 2;
 }
 
@@ -62,9 +74,9 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return 0;
+        return 0.001;
     }
-    return 5;
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
@@ -76,17 +88,37 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
 }
 
 - (NSArray<NSString *> *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return @[@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#"];
+    return self.A_ZArray;
 }
 
--(NSMutableArray *)A_ZArray{
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section == 0) {
+        return @"";
+    }
+    return self.A_ZArray[section - 1];
+}
+
+#pragma mark --------------------Construction Properties--------------------
+-(UISearchBar *)searchBar {
+    if (_searchBar == nil) {
+        _searchBar = [[UISearchBar alloc]init];
+//        _searchBar.delegate = self;
+        _searchBar.searchBarStyle = UISearchBarStyleMinimal;
+        _searchBar.barStyle = UIBarStyleDefault;
+        _searchBar.placeholder = @"请输入搜索的内容";
+        _searchBar.showsCancelButton = NO;
+    }
+    return _searchBar;
+}
+
+-(NSMutableArray *)A_ZArray {
     if (_A_ZArray == nil) {
         _A_ZArray = [NSMutableArray arrayWithObjects:@"A",@"B",@"C",@"D",@"E",@"F",@"G",@"H",@"I",@"J",@"K",@"L",@"M",@"N",@"O",@"P",@"Q",@"R",@"S",@"T",@"U",@"V",@"W",@"X",@"Y",@"Z",@"#", nil];
     }
     return _A_ZArray;
 }
 
--(NSMutableArray *)sub_A_ZArray{
+-(NSMutableArray *)sub_A_ZArray {
     if (_sub_A_ZArray == nil) {
         _sub_A_ZArray = [NSMutableArray array];
     }
