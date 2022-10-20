@@ -6,12 +6,13 @@
 //
 
 #import "ProfileController.h"
-
+#import "ProFileNormalManager.h"
 static NSString *ProfileHeaderCellId = @"ProfileHeaderCellId";
 static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 
 @interface ProfileController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) NSMutableArray *normalCellDatas;
 @end
 
 @implementation ProfileController
@@ -22,8 +23,9 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 
 
 - (void)initUI {
-    self.view.backgroundColor = [[UIColor alloc] initWithR:255.0 g:255.0 b:255.0 a:1];
+    self.view.backgroundColor = BlackgroundColorWhite;
     _tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 57, ScreenWidth, ScreenHeight) style:UITableViewStyleGrouped];
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [_tableView registerClass:ProfileHeaderCell.class forCellReuseIdentifier:ProfileHeaderCellId];
     [_tableView registerClass:ProfieNormalCell.class forCellReuseIdentifier:ProfileNormalCellId];
     _tableView.delegate = self;
@@ -40,27 +42,43 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 
 #pragma mark --------------------UITableViewDataSource--------------------
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    UITableViewCell *cell;
     if (indexPath.section == 0) {
-        cell = (ProfileHeaderCell *)[tableView dequeueReusableCellWithIdentifier:ProfileHeaderCellId];
-    } else {
-        cell = (ProfieNormalCell *)[tableView dequeueReusableCellWithIdentifier:ProfileNormalCellId];
+        ProfileHeaderCell *cell = (ProfileHeaderCell *)[tableView dequeueReusableCellWithIdentifier:ProfileHeaderCellId];
+        cell.iconImageView.image = [UIImage imageNamed:@"homepage_selected"];
+        return [self getAttributedCell:cell];
     }
+    ProfieNormalCell *cell = (ProfieNormalCell *)[tableView dequeueReusableCellWithIdentifier:ProfileNormalCellId];
+    if (indexPath.row == [tableView numberOfRowsInSection:indexPath.section] - 1) {
+        [cell.separator setHidden:YES];
+    }
+    ProFileNormalModel *model = self.normalCellDatas[indexPath.section][indexPath.row];
+    cell.title.text = model.title;
+    cell.titleIcon.image = [UIImage imageNamed:model.titleIcon];
+    return [self getAttributedCell:cell];
+}
+
+- (nonnull UITableViewCell *)getAttributedCell:(UITableViewCell *)cell {
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    cell.backgroundColor = [[UIColor alloc] initWithR:255.0 g:255.0 b:255.0 a:1];
-    return  cell;
+    cell.backgroundColor = BlackgroundColorWhite;
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     if (section == 0) {
-        return 0;
+        return 0.0001;
     }
     return 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 10;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 2)];
+    headerView.backgroundColor = NavGray;
+    return headerView;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
@@ -96,4 +114,11 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
     }
 }
 
+#pragma mark --------------------getset--------------------
+- (NSMutableArray *)normalCellDatas {
+    if (_normalCellDatas == nil) {
+        _normalCellDatas = [[ProFileNormalManager shareInstance] parseDatas];
+    }
+    return _normalCellDatas;
+}
 @end

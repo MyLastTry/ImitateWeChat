@@ -40,6 +40,8 @@
 		B39A770128F903C9002C7C71 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A770028F903C9002C7C71 /* ContactModel.swift */; };
 		B39A770528F908D7002C7C71 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A770428F908D7002C7C71 /* BaseTableViewCell.swift */; };
 		B39A770728F93221002C7C71 /* TextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B39A770628F93221002C7C71 /* TextView.xib */; };
+		B3DAD96629011C7700D94690 /* ProFileNormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DAD96529011C7700D94690 /* ProFileNormalModel.m */; };
+		B3DAD96929011ED300D94690 /* ProFileNormalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DAD96829011ED300D94690 /* ProFileNormalManager.m */; };
 		D97116FF112BE3AC494E0149 /* Pods_ImitateWeChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B01B6AD512E91CC1F4379C /* Pods_ImitateWeChatTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,10 @@
 		B39A770028F903C9002C7C71 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
 		B39A770428F908D7002C7C71 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		B39A770628F93221002C7C71 /* TextView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextView.xib; sourceTree = "<group>"; };
+		B3DAD96429011C7700D94690 /* ProFileNormalModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProFileNormalModel.h; sourceTree = "<group>"; };
+		B3DAD96529011C7700D94690 /* ProFileNormalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProFileNormalModel.m; sourceTree = "<group>"; };
+		B3DAD96729011ED300D94690 /* ProFileNormalManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProFileNormalManager.h; sourceTree = "<group>"; };
+		B3DAD96829011ED300D94690 /* ProFileNormalManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProFileNormalManager.m; sourceTree = "<group>"; };
 		C93E501C75206959850E5DE8 /* Pods_ImitateWeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImitateWeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B01B6AD512E91CC1F4379C /* Pods_ImitateWeChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImitateWeChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2DF22D3AB102FB4B32940A9 /* Pods-ImitateWeChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateWeChatTests.release.xcconfig"; path = "Target Support Files/Pods-ImitateWeChatTests/Pods-ImitateWeChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -411,6 +417,8 @@
 			isa = PBXGroup;
 			children = (
 				B39A76E928F7E225002C7C71 /* ProfileData.plist */,
+				B3DAD96729011ED300D94690 /* ProFileNormalManager.h */,
+				B3DAD96829011ED300D94690 /* ProFileNormalManager.m */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -418,6 +426,8 @@
 		B39A76EB28F7E3D2002C7C71 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B3DAD96429011C7700D94690 /* ProFileNormalModel.h */,
+				B3DAD96529011C7700D94690 /* ProFileNormalModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -713,12 +723,14 @@
 				B39A770128F903C9002C7C71 /* ContactModel.swift in Sources */,
 				B39A766728F6B929002C7C71 /* AppDelegate.m in Sources */,
 				B39A76AD28F6BD34002C7C71 /* WeChatController.m in Sources */,
+				B3DAD96929011ED300D94690 /* ProFileNormalManager.m in Sources */,
 				B39A76B128F6BD59002C7C71 /* ContactController.m in Sources */,
 				B39A76B628F6BDD0002C7C71 /* FindController.m in Sources */,
 				B39A770528F908D7002C7C71 /* BaseTableViewCell.swift in Sources */,
 				B39A767828F6B92D002C7C71 /* main.m in Sources */,
 				B39A766A28F6B929002C7C71 /* SceneDelegate.m in Sources */,
 				B39A76FA28F80BE8002C7C71 /* CommonDefine.swift in Sources */,
+				B3DAD96629011C7700D94690 /* ProFileNormalModel.m in Sources */,
 				B39A76D028F6C448002C7C71 /* PushCtrManager.m in Sources */,
 				B39A76F828F809D6002C7C71 /* FindNormalCell.swift in Sources */,
 			);

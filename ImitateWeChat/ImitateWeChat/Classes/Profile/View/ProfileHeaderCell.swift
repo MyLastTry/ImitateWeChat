@@ -16,7 +16,7 @@ class ProfileHeaderCell: BaseTableViewCell {
     var statusBtn: UIButton!
     
     override func initUI() {
-        iconImageView = UIImageView(image: UIImage(named: "homepage_selected"))
+        iconImageView = UIImageView()
         iconImageView.backgroundColor = .orange
         iconImageView.layer.masksToBounds = true
         iconImageView.layer.cornerRadius = 5

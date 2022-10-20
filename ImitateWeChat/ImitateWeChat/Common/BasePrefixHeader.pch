@@ -51,5 +51,5 @@
 #define NavBlue UIColorFromRGB(0x7086FE)
 #define NavGray [[UIColor alloc] initWithR:243 g:241 b:243 a:1]
 #define TabGray [[UIColor alloc] initWithR:249 g:248 b:250 a:1]
-
+#define BlackgroundColorWhite [[UIColor alloc] initWithR:255 g:255 b:255 a:1]
 #endif /* BasePrefixHeader_pch */

@@ -26,3 +26,6 @@ let IsiPad: Bool = {
         return false
     }
 }()
+
+// MARK: -------------------------------- Color --------------------------------
+let NavGray = UIColor(r: 243, g: 241, b: 243)
