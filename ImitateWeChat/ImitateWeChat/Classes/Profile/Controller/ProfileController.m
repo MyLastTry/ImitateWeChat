@@ -12,7 +12,7 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 
 @interface ProfileController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
-@property (nonatomic, assign) NSMutableArray *normalCellDatas;
+@property (nonatomic, strong) NSMutableArray *normalCellDatas;
 @end
 
 @implementation ProfileController

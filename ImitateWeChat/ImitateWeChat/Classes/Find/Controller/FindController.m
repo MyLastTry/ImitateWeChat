@@ -6,11 +6,13 @@
 //
 
 #import "FindController.h"
+#import "FindManager.h"
 
 static NSString *FindNormalCellId = @"FindNormalCellId";
 
 @interface FindController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, assign) NSMutableArray *cellDatas;
 @end
 
 @implementation FindController
@@ -42,6 +44,9 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FindNormalCell *cell = (FindNormalCell *)[tableView dequeueReusableCellWithIdentifier:FindNormalCellId];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    FindModel *model = self.cellDatas[indexPath.section][indexPath.row];
+    cell.title.text = model.title;
+    cell.titleIcon.image = [UIImage imageNamed:model.titleIcon];
     return cell;
 }
 
@@ -70,4 +75,12 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
     return 54;
 }
 
+
+#pragma mark --------------------getset--------------------
+- (NSMutableArray *)cellDatas {
+    if (_cellDatas == nil) {
+        _cellDatas = [[FindManager shareInstance] parseDatas];
+    }
+    return _cellDatas;
+}
 @end

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		241C13302FA0B7169DADB97A /* Pods_ImitateWeChat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C93E501C75206959850E5DE8 /* Pods_ImitateWeChat.framework */; };
 		602EC23FF60BC42F1BE2A0F4 /* Pods_ImitateWeChat_ImitateWeChatUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6CA06319B818394518FEAD /* Pods_ImitateWeChat_ImitateWeChatUITests.framework */; };
+		B374D59829023C7900F88887 /* FindModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B374D59729023C7900F88887 /* FindModel.m */; };
+		B374D59B29023CAD00F88887 /* FindManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B374D59A29023CAD00F88887 /* FindManager.m */; };
+		B374D59E29023E2100F88887 /* BasePlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B374D59D29023E2100F88887 /* BasePlistManager.m */; };
 		B39A766728F6B929002C7C71 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A766628F6B929002C7C71 /* AppDelegate.m */; };
 		B39A766A28F6B929002C7C71 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B39A766928F6B929002C7C71 /* SceneDelegate.m */; };
 		B39A767028F6B929002C7C71 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39A766E28F6B929002C7C71 /* Main.storyboard */; };
@@ -42,6 +45,8 @@
 		B39A770728F93221002C7C71 /* TextView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B39A770628F93221002C7C71 /* TextView.xib */; };
 		B3DAD96629011C7700D94690 /* ProFileNormalModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DAD96529011C7700D94690 /* ProFileNormalModel.m */; };
 		B3DAD96929011ED300D94690 /* ProFileNormalManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DAD96829011ED300D94690 /* ProFileNormalManager.m */; };
+		B3DAD9712902392C00D94690 /* FindData.plist in Resources */ = {isa = PBXBuildFile; fileRef = B3DAD9732902392C00D94690 /* FindData.plist */; };
+		B3DAD97929023B6B00D94690 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DAD97829023B6B00D94690 /* BaseModel.m */; };
 		D97116FF112BE3AC494E0149 /* Pods_ImitateWeChatTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9B01B6AD512E91CC1F4379C /* Pods_ImitateWeChatTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +74,12 @@
 		8F09FFA4E428DD80F3975B56 /* Pods-ImitateWeChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateWeChat.debug.xcconfig"; path = "Target Support Files/Pods-ImitateWeChat/Pods-ImitateWeChat.debug.xcconfig"; sourceTree = "<group>"; };
 		8F5BBE199972EFC00D8E96FF /* Pods-ImitateWeChatTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateWeChatTests.debug.xcconfig"; path = "Target Support Files/Pods-ImitateWeChatTests/Pods-ImitateWeChatTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C6CA06319B818394518FEAD /* Pods_ImitateWeChat_ImitateWeChatUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImitateWeChat_ImitateWeChatUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B374D59629023C7900F88887 /* FindModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindModel.h; sourceTree = "<group>"; };
+		B374D59729023C7900F88887 /* FindModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindModel.m; sourceTree = "<group>"; };
+		B374D59929023CAD00F88887 /* FindManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FindManager.h; sourceTree = "<group>"; };
+		B374D59A29023CAD00F88887 /* FindManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FindManager.m; sourceTree = "<group>"; };
+		B374D59C29023E2100F88887 /* BasePlistManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasePlistManager.h; sourceTree = "<group>"; };
+		B374D59D29023E2100F88887 /* BasePlistManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasePlistManager.m; sourceTree = "<group>"; };
 		B39A766228F6B929002C7C71 /* ImitateWeChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImitateWeChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39A766528F6B929002C7C71 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B39A766628F6B929002C7C71 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +141,10 @@
 		B3DAD96529011C7700D94690 /* ProFileNormalModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProFileNormalModel.m; sourceTree = "<group>"; };
 		B3DAD96729011ED300D94690 /* ProFileNormalManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProFileNormalManager.h; sourceTree = "<group>"; };
 		B3DAD96829011ED300D94690 /* ProFileNormalManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProFileNormalManager.m; sourceTree = "<group>"; };
+		B3DAD9722902392C00D94690 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/FindData.plist; sourceTree = "<group>"; };
+		B3DAD9742902393000D94690 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "zh-Hans"; path = "zh-Hans.lproj/FindData.plist"; sourceTree = "<group>"; };
+		B3DAD97729023B6B00D94690 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		B3DAD97829023B6B00D94690 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		C93E501C75206959850E5DE8 /* Pods_ImitateWeChat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImitateWeChat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B01B6AD512E91CC1F4379C /* Pods_ImitateWeChatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImitateWeChatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2DF22D3AB102FB4B32940A9 /* Pods-ImitateWeChatTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImitateWeChatTests.release.xcconfig"; path = "Target Support Files/Pods-ImitateWeChatTests/Pods-ImitateWeChatTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -258,6 +273,7 @@
 		B39A769B28F6B9DA002C7C71 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				B3DAD97629023B5200D94690 /* Model */,
 				B39A770328F908B8002C7C71 /* View */,
 				B39A76CD28F6C42B002C7C71 /* Mgr */,
 				B39A76CC28F6C41C002C7C71 /* Ctr */,
@@ -296,6 +312,8 @@
 		B39A76A828F6BC52002C7C71 /* Find */ = {
 			isa = PBXGroup;
 			children = (
+				B3DAD97529023AD300D94690 /* Model */,
+				B3DAD96E2902373D00D94690 /* Data */,
 				B39A76F628F809AA002C7C71 /* View */,
 				B39A76B328F6BDB0002C7C71 /* Controller */,
 			);
@@ -380,6 +398,8 @@
 			children = (
 				B39A76CE28F6C448002C7C71 /* PushCtrManager.h */,
 				B39A76CF28F6C448002C7C71 /* PushCtrManager.m */,
+				B374D59C29023E2100F88887 /* BasePlistManager.h */,
+				B374D59D29023E2100F88887 /* BasePlistManager.m */,
 			);
 			path = Mgr;
 			sourceTree = "<group>";
@@ -463,6 +483,34 @@
 				B39A770628F93221002C7C71 /* TextView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B3DAD96E2902373D00D94690 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B3DAD9732902392C00D94690 /* FindData.plist */,
+				B374D59929023CAD00F88887 /* FindManager.h */,
+				B374D59A29023CAD00F88887 /* FindManager.m */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B3DAD97529023AD300D94690 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B374D59629023C7900F88887 /* FindModel.h */,
+				B374D59729023C7900F88887 /* FindModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B3DAD97629023B5200D94690 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B3DAD97729023B6B00D94690 /* BaseModel.h */,
+				B3DAD97829023B6B00D94690 /* BaseModel.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -577,6 +625,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B39A767528F6B92D002C7C71 /* LaunchScreen.storyboard in Resources */,
+				B3DAD9712902392C00D94690 /* FindData.plist in Resources */,
 				B39A770728F93221002C7C71 /* TextView.xib in Resources */,
 				B39A76C728F6C384002C7C71 /* Localizable.strings in Resources */,
 				B39A767228F6B92D002C7C71 /* Assets.xcassets in Resources */,
@@ -709,6 +758,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B374D59E29023E2100F88887 /* BasePlistManager.m in Sources */,
 				B39A76DD28F7AD96002C7C71 /* make.m in Sources */,
 				B39A769E28F6BACE002C7C71 /* BaseTabBarController.m in Sources */,
 				B39A76E128F7AF7D002C7C71 /* ProfieNormalCell.swift in Sources */,
@@ -732,6 +782,9 @@
 				B39A76FA28F80BE8002C7C71 /* CommonDefine.swift in Sources */,
 				B3DAD96629011C7700D94690 /* ProFileNormalModel.m in Sources */,
 				B39A76D028F6C448002C7C71 /* PushCtrManager.m in Sources */,
+				B3DAD97929023B6B00D94690 /* BaseModel.m in Sources */,
+				B374D59B29023CAD00F88887 /* FindManager.m in Sources */,
+				B374D59829023C7900F88887 /* FindModel.m in Sources */,
 				B39A76F828F809D6002C7C71 /* FindNormalCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -797,6 +850,15 @@
 				B39A76CB28F6C38B002C7C71 /* fr */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		B3DAD9732902392C00D94690 /* FindData.plist */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3DAD9722902392C00D94690 /* en */,
+				B3DAD9742902393000D94690 /* zh-Hans */,
+			);
+			name = FindData.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -923,7 +985,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAA262ZN79;
+				DEVELOPMENT_TEAM = 5S22YF9753;
 				GCC_PREFIX_HEADER = "${SRCROOT}/ImitateWeChat/Common/BasePrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImitateWeChat/Info.plist;
@@ -937,7 +999,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Cfl.SampleApp.ImitateWeChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cfl.ImitateWeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ImitateWeChat/Common/ImitateWeChat-Bridging-Header.h";
@@ -956,7 +1018,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = FAA262ZN79;
+				DEVELOPMENT_TEAM = 5S22YF9753;
 				GCC_PREFIX_HEADER = "${SRCROOT}/ImitateWeChat/Common/BasePrefixHeader.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ImitateWeChat/Info.plist;
@@ -970,7 +1032,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Cfl.SampleApp.ImitateWeChat;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Cfl.ImitateWeChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "ImitateWeChat/Common/ImitateWeChat-Bridging-Header.h";

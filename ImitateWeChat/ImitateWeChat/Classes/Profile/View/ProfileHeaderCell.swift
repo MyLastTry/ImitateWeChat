@@ -15,7 +15,7 @@ class ProfileHeaderCell: BaseTableViewCell {
     var qrCodeBtn: UIButton!
     var statusBtn: UIButton!
     
-    override func initUI() {
+    override func initNoneStyleUI() {
         iconImageView = UIImageView()
         iconImageView.backgroundColor = .orange
         iconImageView.layer.masksToBounds = true

@@ -19,11 +19,8 @@ static ProFileNormalManager* mProFileNormalManager = nil;
 }
 
 - (NSMutableArray *)parseDatas {
-    NSMutableArray<NSMutableArray *> *arrs = [NSMutableArray new];
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"ProfileData" ofType:@"plist"];
-    NSMutableArray *datas = [NSMutableArray arrayWithContentsOfFile:path];
-    for (NSMutableArray *arr in datas) {
+    self.path = @"ProfileData";
+    for (NSMutableArray *arr in self.datas) {
         NSMutableArray<ProFileNormalModel *> *proFileNormalArr = [NSMutableArray new];
         for (NSMutableDictionary *dic in arr) {
             ProFileNormalModel *model = [ProFileNormalModel new];
@@ -31,9 +28,9 @@ static ProFileNormalManager* mProFileNormalManager = nil;
             model.title = [dic objectForKey:@"title"];
             [proFileNormalArr addObject:model];
         }
-        [arrs addObject:proFileNormalArr];
+        [self.arrs addObject:proFileNormalArr];
     }
-    return arrs;
+    return self.arrs;
 }
 
 @end

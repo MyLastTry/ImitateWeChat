@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<array>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Wechat Moments</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Video number</string>
+		</dict>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Live broadcast</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Scan</string>
+		</dict>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Shake</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Look</string>
+		</dict>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Search</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Nearby</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Shopping</string>
+		</dict>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Gaming</string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>titleIcon</key>
+			<string>icon</string>
+			<key>title</key>
+			<string>Applets</string>
+		</dict>
+	</array>
+</array>
+</plist>
