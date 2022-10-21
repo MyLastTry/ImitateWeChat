@@ -118,7 +118,6 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 - (NSMutableArray *)normalCellDatas {
     if (_normalCellDatas == nil) {
         _normalCellDatas = [[ProFileNormalManager shareInstance] parseDatas];
-        daf 
     }
     return _normalCellDatas;
 }
