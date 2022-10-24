@@ -9,10 +9,8 @@
 
 @implementation BasePlistManager
 - (NSMutableArray *)datas {
-    if (_datas == nil) {
-        NSString *filePath = [[NSBundle mainBundle] pathForResource:_path ofType:@"plist"];
-        _datas = [NSMutableArray arrayWithContentsOfFile:filePath];
-    }
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:_path ofType:@"plist"];
+    _datas = [NSMutableArray arrayWithContentsOfFile:filePath];
     return _datas;
 }
 

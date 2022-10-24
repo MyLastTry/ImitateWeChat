@@ -5,3 +5,18 @@
   Created by Xltt on 2022/10/12.
   
 */
+// MARK: ------------------------- TabBar -------------------------
+"Chats" = "Chats";
+"Contacts" = "Contacts";
+"Discover" = "Discover";
+"Me" = "Me";
+
+// MARK: ------------------------- Me My Profile -------------------------
+"My Profile" = "My Profile";
+
+// MARK: ------------------------- Contacts -------------------------
+"New Friends" = "New Friends";
+"Chats Only Friends" = "Chats Only Friends";
+"Group Chats" = "Group Chats";
+"Tags" = "Tags";
+"Official Accounts" = "Official Accounts";

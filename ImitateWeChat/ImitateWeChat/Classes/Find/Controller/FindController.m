@@ -6,7 +6,7 @@
 //
 
 #import "FindController.h"
-#import "FindManager.h"
+#import "FindDataManager.h"
 
 static NSString *FindNormalCellId = @"FindNormalCellId";
 
@@ -79,7 +79,7 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
 #pragma mark --------------------getset--------------------
 - (NSMutableArray *)cellDatas {
     if (_cellDatas == nil) {
-        _cellDatas = [[FindManager shareInstance] parseDatas];
+        _cellDatas = [[FindDataManager shareInstance] parseDatas];
     }
     return _cellDatas;
 }

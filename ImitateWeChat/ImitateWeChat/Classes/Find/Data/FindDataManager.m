@@ -5,13 +5,13 @@
 //  Created by Xltt on 2022/10/21.
 //
 
-#import "FindManager.h"
-static FindManager *mFindManager = nil;
-@implementation FindManager
+#import "FindDataManager.h"
+static FindDataManager *mFindManager = nil;
+@implementation FindDataManager
 + (instancetype)shareInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        mFindManager = [FindManager new];
+        mFindManager = [FindDataManager new];
     });
     return mFindManager;
 }

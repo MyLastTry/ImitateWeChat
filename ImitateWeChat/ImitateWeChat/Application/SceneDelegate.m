@@ -53,5 +53,10 @@
     // to restore the scene back to its current state.
 }
 
+- (BOOL)isLandscape
+{
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    return (orientation == UIInterfaceOrientationLandscapeLeft || orientation == UIInterfaceOrientationLandscapeRight);
+}
 
 @end

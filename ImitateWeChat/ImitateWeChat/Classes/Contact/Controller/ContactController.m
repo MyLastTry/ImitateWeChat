@@ -12,7 +12,7 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
 @interface ContactController () <UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UISearchBar *searchBar;
-
+@property (nonatomic, strong) NSMutableArray *firstSectionDatas;
 /** 字母*/
 @property (strong, nonatomic) NSMutableArray *A_ZArray;
 /** 字母A_Z 之后*/
@@ -58,6 +58,9 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     FindNormalCell *cell = (FindNormalCell *)[tableView dequeueReusableCellWithIdentifier:FindNormalCellId];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    if (indexPath.section == 0) {
+        cell.title.text = self.firstSectionDatas[indexPath.row];
+    }
     return cell;
 }
 
@@ -123,6 +126,13 @@ static NSString *FindNormalCellId = @"FindNormalCellId";
         _sub_A_ZArray = [NSMutableArray array];
     }
     return _sub_A_ZArray;
+}
+
+- (NSMutableArray *)firstSectionDatas {
+    if (_firstSectionDatas == nil) {
+        _firstSectionDatas = [NSMutableArray arrayWithObjects:NSLocalizedString(@"New Friends", nil), NSLocalizedString(@"Chats Only Friends", nil), NSLocalizedString(@"Group Chats", nil), NSLocalizedString(@"Tags", nil), NSLocalizedString(@"Official Accounts", nil),nil];
+    }
+    return _firstSectionDatas;
 }
 
 @end

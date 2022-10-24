@@ -34,6 +34,7 @@
     
 }
 
+/// 隐藏系统NavBar下划线
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSArray *subViews = allSubviews(self.navigationController.navigationBar);

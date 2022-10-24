@@ -6,7 +6,7 @@
 //
 
 #import "BaseNavigationController.h"
-
+#import "UIBarButtonItem+MainBar.h"
 @interface BaseNavigationController ()
 
 @end
@@ -30,10 +30,19 @@
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
-    [super pushViewController:viewController animated:animated];
-    if (self.viewControllers.count > 1) {
+    if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES;
+        
+        UINavigationItem *vcBtnItem = [viewController navigationItem];
+        vcBtnItem.leftBarButtonItem = [UIBarButtonItem itemWithTarget:self action:@selector(back) image:@"user_icon_back" highImage:@"user_icon_back" andTitle:@""];
     }
+    
+    [super pushViewController:viewController animated:animated];
+}
+
+-(void)back
+{
+    [self popViewControllerAnimated:YES];
 }
 
 @end

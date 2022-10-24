@@ -12,7 +12,12 @@
 #import "ImitateWeChat-Swift.h"
 #import "UIView+LayoutConstraint.h"
 #import "UIDevice+Addition.h"
+#import "UIView+Extension.h"
+#import "UIBarButtonItem+MainBar.h"
+#import "NSString+Addition.h"
 #import <Metal/Metal.h>
+#import "ChatMessageController.h"
+
 #pragma mark --------------------Screen--------------------
 /***  当前屏幕宽度 */
 #define ScreenWidth  [[UIScreen mainScreen] bounds].size.width
@@ -53,3 +58,10 @@
 #define TabGray [[UIColor alloc] initWithR:249 g:248 b:250 a:1]
 #define BlackgroundColorWhite [[UIColor alloc] initWithR:255 g:255 b:255 a:1]
 #endif /* BasePrefixHeader_pch */
+
+
+#pragma mark -------------------- 比例尺寸 --------------------
+#define autoScaleW(width)   [self autoScaleW:(width)]
+#define autoScaleH(height) [self autoScaleH:(height)]
+#define aScaleW(width)   [self aScaleW:(width)]
+#define aScaleH(height) [self aScaleH:(height)]

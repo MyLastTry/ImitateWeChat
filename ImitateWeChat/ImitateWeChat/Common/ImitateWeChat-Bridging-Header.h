@@ -4,3 +4,8 @@
 
 #import "UIView+LayoutConstraint.h"
 #import <Metal/Metal.h>
+#import "BaseViewController.h"
+#import "AppDelegate.h"
+#import "SceneDelegate.h"
+#import "ProFileDataManager.h"
+#import "ProFileNormalModel.h"

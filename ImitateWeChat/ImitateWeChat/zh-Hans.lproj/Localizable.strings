@@ -5,3 +5,18 @@
   Created by Xltt on 2022/10/12.
   
 */
+// MARK: ------------------------- TabBar -------------------------
+"Chats" = "微信";
+"Contacts" = "通讯录";
+"Discover" = "发现";
+"Me" = "我的";
+
+// MARK: ------------------------- Me My Profile -------------------------
+"My Profile" = "个人信息";
+
+// MARK: ------------------------- Contacts -------------------------
+"New Friends" = "新的朋友";
+"Chats Only Friends" = "仅聊天的朋友";
+"Group Chats" = "群聊";
+"Tags" = "标签";
+"Official Accounts" = "公众号";

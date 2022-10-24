@@ -6,7 +6,7 @@
 //
 
 #import "ProfileController.h"
-#import "ProFileNormalManager.h"
+#import "ProFileDataManager.h"
 static NSString *ProfileHeaderCellId = @"ProfileHeaderCellId";
 static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 
@@ -19,6 +19,11 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setHidden:YES];
 }
 
 
@@ -109,15 +114,56 @@ static NSString *ProfileNormalCellId = @"ProfileNormalCellId";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 0) {
-        InformationController *vc = [[InformationController alloc]init];
+        ProInformationController *vc = [[ProInformationController alloc] init];
         [self.navigationController pushViewController:vc animated:true];
+    } else if (indexPath.section == 1) {
+        ProServiceController *vc = [[ProServiceController alloc] init];
+        [self.navigationController pushViewController:vc animated:true];
+    } else if (indexPath.section == 2) {
+        [self switchVc:indexPath.row];
+    } else if (indexPath.section == 3) {
+        ProSettingController *vc = [[ProSettingController alloc] init];
+        [self.navigationController pushViewController:vc animated:true];
+    } else {
+        return;
+    }
+}
+
+- (void)switchVc:(NSInteger)row {
+    switch (row) {
+        case 0:
+        {
+            ProCollectionController *vc = [[ProCollectionController alloc] init];
+            [self.navigationController pushViewController:vc animated:true];
+            break;
+        }
+        case 1:
+        {
+            ProMomentsController *vc = [[ProMomentsController alloc] init];
+            [self.navigationController pushViewController:vc animated:true];
+            break;
+        }
+        case 2:
+        {
+            ProCardsController *vc = [[ProCardsController alloc] init];
+            [self.navigationController pushViewController:vc animated:true];
+            break;
+        }
+        case 3:
+        {
+            ProEmoController *vc = [[ProEmoController alloc] init];
+            [self.navigationController pushViewController:vc animated:true];
+            break;
+        }
+        default:
+            break;
     }
 }
 
 #pragma mark --------------------getset--------------------
 - (NSMutableArray *)normalCellDatas {
     if (_normalCellDatas == nil) {
-        _normalCellDatas = [[ProFileNormalManager shareInstance] parseDatas];
+        _normalCellDatas = [[ProFileDataManager shareInstance] parseDatas];
     }
     return _normalCellDatas;
 }

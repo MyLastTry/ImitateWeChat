@@ -15,7 +15,7 @@
 			<key>titleIcon</key>
 			<string>icon</string>
 			<key>title</key>
-			<string>服务</string>
+			<string>Service</string>
 		</dict>
 	</array>
 	<array>
@@ -23,25 +23,25 @@
 			<key>titleIcon</key>
 			<string>icon</string>
 			<key>title</key>
-			<string>收藏</string>
+			<string>Collection</string>
 		</dict>
 		<dict>
 			<key>titleIcon</key>
 			<string>icon</string>
 			<key>title</key>
-			<string>朋友圈</string>
+			<string>Moments</string>
 		</dict>
 		<dict>
 			<key>titleIcon</key>
 			<string>icon</string>
 			<key>title</key>
-			<string>卡包</string>
+			<string>Cards</string>
 		</dict>
 		<dict>
 			<key>titleIcon</key>
 			<string>icon</string>
 			<key>title</key>
-			<string>表情</string>
+			<string>Emote</string>
 		</dict>
 	</array>
 	<array>
@@ -49,7 +49,7 @@
 			<key>titleIcon</key>
 			<string>icon</string>
 			<key>title</key>
-			<string>设置</string>
+			<string>Setting</string>
 		</dict>
 	</array>
 </array>
